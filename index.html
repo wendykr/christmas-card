@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mukta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="card">
+        <div class="card__text">
+          <p class="card__text--font">Nechť vánoční stromeček zazáří radostí a pohodou do Tvého srdce. Ať tyto svátky přinesou do Tvého života klid, lásku a harmonii.</p>
+          <p class="card__text--name"></p>
+        </div>
+        <div class="card__container">
+          <img class="card__images" src="./images/christmas-tree.png">
+        </div>
+      </div>
+
+      <div class="setting">
+        <form class="setting__form">
+          <div class="setting__form--row">
+            <label class="setting__form--label">Vaše jméno: </label> <input class="setting__input--from" />
+          </div>
+          <div class="setting__form--row">
+            <label class="setting__form--label">Motiv: </label>
+              <select class="setting__select">
+                <option value="tree">Stromeček</option>
+                <option value="lantern">Lucerna</option>
+              </select>
+          </div>
+          <button class="setting__button disabled" disabled>Vygenerovat</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="navigation hidden">
+      <button class="navigation__button mute hidden">🔈</button>
+      <button class="navigation__button unmute">🔊</button>
+    </div>
+
+    <div class="footer">
+      <a href="https://github.com/wendykr" class="footer__link"><img class="footer__logo" src="./images/vk_icon.svg"></a>
+    </div>
+
+    <audio id="music" class="player" src="./audio/holiday-spectacular.mp3" preload="auto"></audio>
+
+    <canvas class="snowfall hidden"></canvas>
+    <script type="module" src="./js/snih.js"></script>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
